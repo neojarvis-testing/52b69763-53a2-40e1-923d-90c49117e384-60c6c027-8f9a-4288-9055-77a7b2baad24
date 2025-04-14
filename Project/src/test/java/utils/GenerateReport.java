@@ -20,13 +20,11 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-/**
+/*
  * Creator: Divyansh Gour
  *
- * Description: The Reporter class provides methods to generate and manage
- * ExtentReports.
- * It includes functionality to create reports, add screenshots to reports, and
- * manage report files.
+ * Description: The Reporter class provides methods to generate and manage ExtentReports.
+ * It includes functionality to create reports, add screenshots to reports, and manage report files.
  */
 public class GenerateReport extends Base {
     private static ExtentReports extentReport;

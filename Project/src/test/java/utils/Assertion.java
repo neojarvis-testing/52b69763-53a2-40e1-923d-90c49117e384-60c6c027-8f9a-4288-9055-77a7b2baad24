@@ -1,11 +1,12 @@
 package utils;
+
+import org.junit.Assert;
+
 /**
  * @Created by Kasak
  * @Description This utility class provides assertion methods to verify conditions in test cases,
  *              using TestNG and ExtentReports for logging and reporting.
  */
-
-import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -29,7 +30,6 @@ public class Assertion {
             LoggerHandler.error("Assertion Error: Entered Wrong Credentials. " + e.getMessage());
             test.log(Status.WARNING, "Entered Wrong Credentials. " + e.getMessage());
             Screenshot.captureScreenshot("Assertion_error_screenshot");
-            GenerateReport.addScreenshotToReport("Assertion Error Screenshot", test, "Title Not Same as expected");
         } catch (Exception e1) {
             LoggerHandler.error("Assertion Error: Entered Wrong Credentials. " + e1.getMessage());
             test.log(Status.WARNING, "Entered Wrong Credentials. " + e1.getMessage());

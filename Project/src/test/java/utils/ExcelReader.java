@@ -7,6 +7,7 @@ package utils;
  */
 
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -21,11 +22,10 @@ public class ExcelReader {
     public static String cellValue = null;
 
     /**
-     * @Description Reads a specific cell value from an Excel sheet based on the
-     *              sheet name,
+     * @Description Reads a specific cell value from an Excel sheet based on the sheet name,
      *              a unique key (e.g., ID), and the column name.
-     * @param sheetName  The name of the sheet to read from.
-     * @param key        The unique identifier to find the specific row.
+     * @param sheetName The name of the sheet to read from.
+     * @param key The unique identifier to find the specific row.
      * @param columnName The name of the column to read data from.
      * @return The value of the cell as a String, or null if not found.
      */
