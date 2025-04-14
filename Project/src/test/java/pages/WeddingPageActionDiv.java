@@ -11,7 +11,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
 import uistore.WeddingPageLocationDiv;
-import utils.Base;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
 
