@@ -22,7 +22,6 @@ public class WebDriverHelper extends Base {
 
         }
     }
-
     /*
      * a. Method Name: waitForElementToBeVisible()
      * b. Author Name: Umang Raj
@@ -39,7 +38,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: waitForElementToBeClickable()
      * b. Author Name: UmangRaj
@@ -88,7 +86,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: sendKeys()
      * b. Author Name: Umang Raj
@@ -104,7 +101,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: getText()
      * b. Author Name: Umang Raj
@@ -121,7 +117,6 @@ public class WebDriverHelper extends Base {
             return null;
         }
     }
-
     /*
      * a. Method Name: jsClick()
      * b. Author Name: Umang Raj
@@ -138,7 +133,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: javascriptScroll()
      * b. Author Name: Umang Raj
@@ -156,7 +150,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: javascriptHighlight()
      * b. Author Name: Umang Raj
@@ -173,7 +166,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: switchDriverToNewWinow()
      * b. Author Name: Umang Raj
@@ -195,7 +187,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: enterAction()
      * b. Author Name: Umang Raj
@@ -211,7 +202,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: actionDownAndEnter()
      * b. Author Name: Umang Raj
@@ -228,7 +218,6 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-
     /*
      * a. Method Name: hoverOverElement()
      * b. Author Name: Umang Raj
