@@ -8,8 +8,6 @@ import org.junit.Assert;
  *              using TestNG and ExtentReports for logging and reporting.
  */
 
-
-
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
@@ -20,12 +18,11 @@ public class Assertion {
      *              a screenshot is captured, and errors are logged.
      * @param actual The actual value to be verified.
      * @param expected The expected value to compare against.
-     * @param test The ExtentTest instance for reporting.
+     * @param test     The ExtentTest instance for reporting.
      */
     public static void assertionVerifyByEqual(String actual, String expected, ExtentTest test) {
         try {
             Assert.assertEquals(actual, expected);
-            LoggerHandler.info("Verification Successful: " + actual);
             test.log(Status.INFO, "Verification Successful: " + actual);
         } catch (AssertionError e) {
             LoggerHandler.error("Assertion Error: Entered Wrong Credentials. " + e.getMessage());
@@ -38,11 +35,12 @@ public class Assertion {
     }
 
     /**
-     * @Description Verifies that the actual text contains the expected text. If the assertion fails,
+     * @Description Verifies that the actual text contains the expected text. If the
+     *              assertion fails,
      *              a screenshot is captured, and errors are logged.
-     * @param actualText The actual text to be verified.
+     * @param actualText   The actual text to be verified.
      * @param expectedText The expected text to check within the actual text.
-     * @param test The ExtentTest instance for reporting.
+     * @param test         The ExtentTest instance for reporting.
      */
     public static void assertionVerifyByContains(String actualText, String expectedText, ExtentTest test) {
         try {

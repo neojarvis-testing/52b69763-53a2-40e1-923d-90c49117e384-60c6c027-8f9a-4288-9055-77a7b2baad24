@@ -7,6 +7,6 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "./features", glue = "stepdefinitions")
-public class TestRunKasak {
+public class TestRunner {
 
 }

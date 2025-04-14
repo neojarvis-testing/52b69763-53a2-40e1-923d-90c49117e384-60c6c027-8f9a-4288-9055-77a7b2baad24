@@ -20,18 +20,19 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
  
-/**
+/*
  * Creator: Divyansh Gour
  *
  * Description: The Reporter class provides methods to generate and manage ExtentReports.
  * It includes functionality to create reports, add screenshots to reports, and manage report files.
  */
 public class GenerateReport extends Base {
-       private static ExtentReports extentReport;
-       public static TakesScreenshot ts;
+    private static ExtentReports extentReport;
+    public static TakesScreenshot ts;
  
     /**
-     * Description: Generates an ExtentReport instance. If an instance already exists, it returns the existing one.
+     * Description: Generates an ExtentReport instance. If an instance already
+     * exists, it returns the existing one.
      *
      * @param reportName The name of the report to be generated.
      * @return An instance of ExtentReports.
@@ -44,7 +45,8 @@ public class GenerateReport extends Base {
     }
  
     /**
-     * Description: Creates a new ExtentReport instance with the specified report name.
+     * Description: Creates a new ExtentReport instance with the specified report
+     * name.
      *
      * @param reportName The name of the report to be created.
      * @return A new instance of ExtentReports.
@@ -110,7 +112,7 @@ public class GenerateReport extends Base {
  
         String destPath = "./" + name;
  
-         ts = (TakesScreenshot) driver;
+        ts = (TakesScreenshot) driver;
         File file = ts.getScreenshotAs(OutputType.FILE);
  
         // Create the screenshots directory if it doesn't exist
@@ -130,33 +132,39 @@ public class GenerateReport extends Base {
     }
  
     /**
-     *Description:  Attaches a screenshot to the ExtentReport with the specified file name, test instance, and description.
+     * Description: Attaches a screenshot to the ExtentReport with the specified
+     * file name, test instance, and description.
      *
-     * @param filename The name of the screenshot file.
-     * @param test The ExtentTest instance to which the screenshot will be added.
+     * @param filename    The name of the screenshot file.
+     * @param test        The ExtentTest instance to which the screenshot will be
+     *                    added.
      * @param description A description of the screenshot.
      */
     public static void addScreenshotToReport(String filename, ExtentTest test, String description) {
         try {
-            test.log(Status.INFO, description, MediaEntityBuilder.createScreenCaptureFromPath(takeScreenshot(filename)).build());
+            test.log(Status.INFO, description,
+                    MediaEntityBuilder.createScreenCaptureFromPath(takeScreenshot(filename)).build());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
  
     /**
-     *Description:  Attaches a screenshot to the ExtentReport with the specified file name, test instance, and description.
+     * Description: Attaches a screenshot to the ExtentReport with the specified
+     * file name, test instance, and description.
      *
-     * @param filename The name of the screenshot file.
-     * @param test The ExtentTest instance to which the screenshot will be added.
+     * @param filename    The name of the screenshot file.
+     * @param test        The ExtentTest instance to which the screenshot will be
+     *                    added.
      * @param description A description of the screenshot.
      */
     public static void addScreenshotToReportfail(String filename, ExtentTest test, String description) {
         try {
-            test.log(Status.FAIL, description, MediaEntityBuilder.createScreenCaptureFromPath(takeScreenshot(filename)).build());
+            test.log(Status.FAIL, description,
+                    MediaEntityBuilder.createScreenCaptureFromPath(takeScreenshot(filename)).build());
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-   
+ 
 }

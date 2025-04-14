@@ -3,16 +3,16 @@ package utils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Set;
- 
+
 public class WebDriverHelper extends Base {
-     /* d. Parameters: By locator, int timeoutInSeconds
+    /*
+     * d. Parameters: By locator, int timeoutInSeconds
      * e. Return type: void
      */
     public void hardWait(long milisecs) {
@@ -22,7 +22,6 @@ public class WebDriverHelper extends Base {
 
         }
     }
-  
     /*
      * a. Method Name: waitForElementToBeVisible()
      * b. Author Name: Umang Raj
@@ -53,10 +52,10 @@ public class WebDriverHelper extends Base {
                     .until(ExpectedConditions.elementToBeClickable(locator));
         } catch (Exception e) {
             Screenshot.captureScreenshot(e.getMessage());
- 
+
         }
     }
- 
+
     /*
      * a. Method Name: waitForValueToBeEntered()
      * b. Author Name: Umang Raj
@@ -73,7 +72,9 @@ public class WebDriverHelper extends Base {
             e.printStackTrace();
         }
     }
-     /* elements
+
+    /*
+     * elements
      * d. Parameters: By locator
      * e. Return type: void
      */
@@ -236,5 +237,3 @@ public class WebDriverHelper extends Base {
     }
 
 }
-
-

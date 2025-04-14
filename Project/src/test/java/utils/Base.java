@@ -22,7 +22,7 @@ public class Base {
     public static FileInputStream file;
     public static Properties prop;
 
-    public void loadProperties() throws IOException {
+    public static void loadProperties() throws IOException {
         String propertiesPath = System.getProperty("user.dir") + "/config/browser.properties";
         try {
             file = new FileInputStream(propertiesPath);
@@ -40,10 +40,9 @@ public class Base {
         try {
             loadProperties();
         } catch (IOException e) {
-
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        
         String executionType = prop.getProperty("executiontype");
         String browserName = prop.getProperty("browser");
 

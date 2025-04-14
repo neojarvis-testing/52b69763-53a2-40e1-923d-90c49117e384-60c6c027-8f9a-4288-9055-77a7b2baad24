@@ -2,7 +2,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksKasak;
+import stepdefinitions.Hooks;
 import uistore.HomePageLocators_Kasak;
 import utils.Assertion;
 import utils.Base;
@@ -31,28 +31,28 @@ public class HomePage_Kasak extends Base {
         wb.waitForElementToBeClickable(HomePageLocators_Kasak.cookies, 10);
         wb.clickOnElement(HomePageLocators_Kasak.cookies);
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.cookies));
-        HooksKasak.test.log(Status.INFO, wb.getText(HomePageLocators_Kasak.cookies));
+        Hooks.test.log(Status.INFO, wb.getText(HomePageLocators_Kasak.cookies));
 
         wb.javascriptScroll(HomePageLocators_Kasak.aboutMayors);
 
         LoggerHandler.info("scroll down to footer");
-        HooksKasak.test.log(Status.INFO, "scroll down to footer" + wb.getText(HomePageLocators_Kasak.aboutMayors));
+        Hooks.test.log(Status.INFO, "scroll down to footer" + wb.getText(HomePageLocators_Kasak.aboutMayors));
         LoggerHandler.info("navigate back to home page");
 
         wb.waitForElementToBeClickable(HomePageLocators_Kasak.aboutMayors, 10);
         wb.clickOnElement(HomePageLocators_Kasak.aboutMayors);
         Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "1", "value"),
-                HooksKasak.test);
+                Hooks.test);
         System.out.println(Base.driver.getCurrentUrl() + "--------------------------------------------------");
         System.out.println(
                 ExcelReader.readCellValue("sheet4", "1", "value") + "--------------------------------------------");
 
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.aboutMayors));
-        HooksKasak.test.log(Status.INFO, wb.getText(HomePageLocators_Kasak.aboutMayors));
+        Hooks.test.log(Status.INFO, wb.getText(HomePageLocators_Kasak.aboutMayors));
 
         Base.driver.navigate().back();
         LoggerHandler.info("navigate back to home page");
-        HooksKasak.test.log(Status.PASS, "navigate back to home page");
+        Hooks.test.log(Status.PASS, "navigate back to home page");
     }
 
     /**
@@ -70,10 +70,10 @@ public class HomePage_Kasak extends Base {
         wb.waitForElementToBeClickable(HomePageLocators_Kasak.pressRoom, 20);
         wb.clickOnElement(HomePageLocators_Kasak.pressRoom);
         Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(), ExcelReader.readCellValue("sheet4", "2", "value"),
-                HooksKasak.test);
+                Hooks.test);
 
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.pressRoom));
-        HooksKasak.test.log(Status.INFO, "clicked on pressRoom " + wb.getText(HomePageLocators_Kasak.pressRoom));
+        Hooks.test.log(Status.INFO, "clicked on pressRoom " + wb.getText(HomePageLocators_Kasak.pressRoom));
 
         Base.driver.navigate().back();
     }
@@ -92,12 +92,12 @@ public class HomePage_Kasak extends Base {
         wb.javascriptScroll(HomePageLocators_Kasak.careers);
         wb.clickOnElement(HomePageLocators_Kasak.careers);
         Assertion.assertionVerifyByContains(Base.driver.getCurrentUrl(),
-                ExcelReader.readCellValue("sheet4", "3", "value"), HooksKasak.test);
+                ExcelReader.readCellValue("sheet4", "3", "value"), Hooks.test);
         Assertion.assertionVerifyByContains(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "4", "value"),
-                HooksKasak.test);
+                Hooks.test);
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.careers));
-        HooksKasak.test.log(Status.INFO, "clicked on Careers " + Base.driver.getCurrentUrl());
-        HooksKasak.test.log(Status.INFO, "verify page title " + Base.driver.getTitle());
+        Hooks.test.log(Status.INFO, "clicked on Careers " + Base.driver.getCurrentUrl());
+        Hooks.test.log(Status.INFO, "verify page title " + Base.driver.getTitle());
         Base.driver.navigate().back();
     }
 
@@ -115,12 +115,12 @@ public class HomePage_Kasak extends Base {
         wb.javascriptScroll(HomePageLocators_Kasak.sustainability);
         wb.clickOnElement(HomePageLocators_Kasak.sustainability);
         Assertion.assertionVerifyByContains(Base.driver.getCurrentUrl(),
-                ExcelReader.readCellValue("sheet4", "5", "value"), HooksKasak.test);
+                ExcelReader.readCellValue("sheet4", "5", "value"), Hooks.test);
         Assertion.assertionVerifyByContains(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "6", "value"),
-                HooksKasak.test);
+                Hooks.test);
         // LoggerHandler.info(wb.getText(HomePageLocators_Kasak.sustainability));
-        HooksKasak.test.log(Status.INFO, "clicked on sustainability " + Base.driver.getCurrentUrl());
-        HooksKasak.test.log(Status.INFO, "verify sustainability page title " + Base.driver.getTitle());
+        Hooks.test.log(Status.INFO, "clicked on sustainability " + Base.driver.getCurrentUrl());
+        Hooks.test.log(Status.INFO, "verify sustainability page title " + Base.driver.getTitle());
         Base.driver.navigate().back();
     }
 
@@ -138,11 +138,11 @@ public class HomePage_Kasak extends Base {
         wb.javascriptScroll(HomePageLocators_Kasak.newsletter);
         wb.clickOnElement(HomePageLocators_Kasak.newsletter);
         Assertion.assertionVerifyByContains(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "8", "value"),
-                HooksKasak.test);
+                Hooks.test);
 
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.newsletter));
-        HooksKasak.test.log(Status.INFO, "clicked on news letter " + Base.driver.getCurrentUrl());
-        HooksKasak.test.log(Status.INFO, "verified news letter link " + Base.driver.getTitle());
+        Hooks.test.log(Status.INFO, "clicked on news letter " + Base.driver.getCurrentUrl());
+        Hooks.test.log(Status.INFO, "verified news letter link " + Base.driver.getTitle());
         Base.driver.navigate().back();
     }
 
@@ -160,11 +160,11 @@ public class HomePage_Kasak extends Base {
         wb.javascriptScroll(HomePageLocators_Kasak.wedding);
         wb.clickOnElement(HomePageLocators_Kasak.wedding);
         Assertion.assertionVerifyByContains(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "10", "value"),
-                HooksKasak.test);
+                Hooks.test);
 
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.wedding));
-        HooksKasak.test.log(Status.INFO, "clicked on wedding function " + Base.driver.getCurrentUrl());
-        HooksKasak.test.log(Status.INFO, "verify wedding function title " + Base.driver.getTitle());
+        Hooks.test.log(Status.INFO, "clicked on wedding function " + Base.driver.getCurrentUrl());
+        Hooks.test.log(Status.INFO, "verify wedding function title " + Base.driver.getTitle());
         Base.driver.navigate().back();
     }
 
@@ -182,11 +182,11 @@ public class HomePage_Kasak extends Base {
         wb.javascriptScroll(HomePageLocators_Kasak.rolex);
         wb.clickOnElement(HomePageLocators_Kasak.rolex);
         Assertion.assertionVerifyByContains(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "12", "value"),
-                HooksKasak.test);
+                Hooks.test);
 
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.rolex));
-        HooksKasak.test.log(Status.INFO, "clicked on rolex link " + Base.driver.getCurrentUrl());
-        HooksKasak.test.log(Status.INFO, "verify the rolex link  " + Base.driver.getTitle());
+        Hooks.test.log(Status.INFO, "clicked on rolex link " + Base.driver.getCurrentUrl());
+        Hooks.test.log(Status.INFO, "verify the rolex link  " + Base.driver.getTitle());
         Base.driver.navigate().back();
     }
 
@@ -206,15 +206,15 @@ public class HomePage_Kasak extends Base {
         wb.clickOnElement(HomePageLocators_Kasak.brands);
 
         Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "14", "value"),
-                HooksKasak.test);
+                Hooks.test);
         LoggerHandler.info(wb.getText(HomePageLocators_Kasak.brands));
-        HooksKasak.test.log(Status.INFO, "clicked on brands function link  " + Base.driver.getCurrentUrl());
-        HooksKasak.test.log(Status.INFO, "verify brands function title " + Base.driver.getTitle());
+        Hooks.test.log(Status.INFO, "clicked on brands function link  " + Base.driver.getCurrentUrl());
+        Hooks.test.log(Status.INFO, "verify brands function title " + Base.driver.getTitle());
         Base.driver.navigate().back();
 
         wb.javascriptHighlight(HomePageLocators_Kasak.keyword);
         Screenshot.captureScreenshot("mayors");
-        GenerateReport.addScreenshotToReport("mayors", HooksKasak.test, "mayors");
+        GenerateReport.addScreenshotToReport("mayors", Hooks.test, "mayors");
     }
 
 }

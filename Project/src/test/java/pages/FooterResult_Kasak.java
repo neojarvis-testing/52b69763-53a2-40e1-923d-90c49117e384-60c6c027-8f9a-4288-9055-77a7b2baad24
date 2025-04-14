@@ -7,7 +7,7 @@ import com.aventstack.extentreports.Status;
  * @Description Class for verifying footer links and their corresponding pages.
  */
 
-import stepdefinitions.HooksKasak;
+import stepdefinitions.Hooks;
 import uistore.HomePageLocators_Kasak;
 import utils.Assertion;
 import utils.Base;
@@ -23,14 +23,14 @@ public class FooterResult_Kasak {
     public static void aboutMayorsVerify() {
         try {
             Assertion.assertionVerifyByEqual(Base.driver.getCurrentUrl(),
-                    ExcelReader.readCellValue("sheet4", "1", "value"), HooksKasak.test);
+                    ExcelReader.readCellValue("sheet4", "1", "value"), Hooks.test);
 
-            HooksKasak.test.log(Status.PASS, "verified the aboutMayors resultPage" + Base.driver.getCurrentUrl());
+            Hooks.test.log(Status.PASS, "verified the aboutMayors resultPage" + Base.driver.getCurrentUrl());
         } catch (Exception e) {
             e.printStackTrace();
 
         } catch (AssertionError e) {
-            HooksKasak.test.log(Status.FAIL,
+            Hooks.test.log(Status.FAIL,
                     "failed to verify the aboutMayors resultPage" + Base.driver.getCurrentUrl());
             e.printStackTrace();
         }
@@ -43,9 +43,9 @@ public class FooterResult_Kasak {
     public static void pressMediaVerify() {
         try {
             Assertion.assertionVerifyByContains(Base.driver.getCurrentUrl(),
-                    ExcelReader.readCellValue("sheet4", "2", "value"), HooksKasak.test);
+                    ExcelReader.readCellValue("sheet4", "2", "value"), Hooks.test);
 
-            HooksKasak.test.log(Status.INFO, "verified the PressMedia resultPage " + Base.driver.getCurrentUrl());
+            Hooks.test.log(Status.INFO, "verified the PressMedia resultPage " + Base.driver.getCurrentUrl());
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -63,9 +63,9 @@ public class FooterResult_Kasak {
     public static void careersVerify() {
         try {
 
-            HooksKasak.test.log(Status.INFO, "verified the career resultPage");
+            Hooks.test.log(Status.INFO, "verified the career resultPage");
 
-            HooksKasak.test.log(Status.INFO, "verified the careers pageTitle");
+            Hooks.test.log(Status.INFO, "verified the careers pageTitle");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -83,9 +83,9 @@ public class FooterResult_Kasak {
     public static void sustainVerify() {
         try {
 
-            HooksKasak.test.log(Status.INFO, "verified the Sustainability result page");
+            Hooks.test.log(Status.INFO, "verified the Sustainability result page");
 
-            HooksKasak.test.log(Status.INFO, "verified the page title");
+            Hooks.test.log(Status.INFO, "verified the page title");
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -101,11 +101,11 @@ public class FooterResult_Kasak {
      */
     public static void newsletterVerify() {
         try {
-            HooksKasak.test.log(Status.INFO, "verified the newsletter resultPage");
+            Hooks.test.log(Status.INFO, "verified the newsletter resultPage");
 
             Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "8", "value"),
-                    HooksKasak.test);
-            HooksKasak.test.log(Status.INFO, "verified the newsletterPage title");
+                    Hooks.test);
+            Hooks.test.log(Status.INFO, "verified the newsletterPage title");
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -124,11 +124,11 @@ public class FooterResult_Kasak {
     public static void weddingVerify() {
         try {
 
-            HooksKasak.test.log(Status.INFO, "verified the Wedding result page ");
+            Hooks.test.log(Status.INFO, "verified the Wedding result page ");
 
             Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "10", "value"),
-                    HooksKasak.test);
-            HooksKasak.test.log(Status.INFO, "verified the page Title");
+                    Hooks.test);
+            Hooks.test.log(Status.INFO, "verified the page Title");
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -145,11 +145,11 @@ public class FooterResult_Kasak {
     public static void rolexVerify() {
         try {
 
-            HooksKasak.test.log(Status.INFO, "verified the rolex page");
+            Hooks.test.log(Status.INFO, "verified the rolex page");
 
             Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "12", "value"),
-                    HooksKasak.test);
-            HooksKasak.test.log(Status.INFO, "verified the page title");
+                    Hooks.test);
+            Hooks.test.log(Status.INFO, "verified the page title");
         } catch (Exception e) {
             e.printStackTrace();
 
@@ -167,15 +167,15 @@ public class FooterResult_Kasak {
         try {
             WebDriverHelper wb = new WebDriverHelper();
 
-            HooksKasak.test.log(Status.INFO, "verified the Brand results page");
+            Hooks.test.log(Status.INFO, "verified the Brand results page");
 
             Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("sheet4", "14", "value"),
-                    HooksKasak.test);
-            HooksKasak.test.log(Status.INFO, "verified the Brands page title");
+                    Hooks.test);
+            Hooks.test.log(Status.INFO, "verified the Brands page title");
 
             Assertion.assertionVerifyByEqual(wb.getText(HomePageLocators_Kasak.keyword),
-                    ExcelReader.readCellValue("sheet4", "15", "value"), HooksKasak.test);
-            HooksKasak.test.log(Status.INFO, "verified the Keyword AboutMayors");
+                    ExcelReader.readCellValue("sheet4", "15", "value"), Hooks.test);
+            Hooks.test.log(Status.INFO, "verified the Keyword AboutMayors");
 
         } catch (Exception e) {
             e.printStackTrace();
