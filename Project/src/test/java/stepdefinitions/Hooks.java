@@ -36,6 +36,7 @@ public class Hooks extends Base {
 
     @AfterAll
     public static void reportFlush() {
+
         reports.flush();
 
     }

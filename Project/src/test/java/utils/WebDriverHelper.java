@@ -22,7 +22,6 @@ public class WebDriverHelper extends Base {
 
         }
     }
-
     /*
      * a. Method Name: waitForElementToBeVisible()
      * b. Author Name: Umang Raj

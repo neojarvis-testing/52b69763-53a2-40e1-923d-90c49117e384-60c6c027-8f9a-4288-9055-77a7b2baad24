@@ -14,17 +14,15 @@ import com.aventstack.extentreports.Status;
 public class Assertion {
 
     /**
-     * @Description Verifies that the actual value equals the expected value. If the
-     *              assertion fails,
+     * @Description Verifies that the actual value equals the expected value. If the assertion fails,
      *              a screenshot is captured, and errors are logged.
-     * @param actual   The actual value to be verified.
+     * @param actual The actual value to be verified.
      * @param expected The expected value to compare against.
      * @param test     The ExtentTest instance for reporting.
      */
     public static void assertionVerifyByEqual(String actual, String expected, ExtentTest test) {
         try {
             Assert.assertEquals(actual, expected);
-            LoggerHandler.info("Verification Successful: " + actual);
             test.log(Status.INFO, "Verification Successful: " + actual);
         } catch (AssertionError e) {
             LoggerHandler.error("Assertion Error: Entered Wrong Credentials. " + e.getMessage());
