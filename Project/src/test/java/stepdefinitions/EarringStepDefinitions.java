@@ -1,4 +1,6 @@
-package stepdefinition;
+package stepdefinitions;
+
+import org.openqa.selenium.By;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
@@ -6,6 +8,7 @@ import io.cucumber.java.en.Then;
 import pages.EarringPage_Siva;
 import pages.HomePage_Siva;
 import uistore.EarringLocator_Siva;
+import utils.Base;
 import utils.WebDriverHelper;
 
 public class EarringStepDefinitions {
@@ -16,11 +19,15 @@ public class EarringStepDefinitions {
 
     @Given("the user is on the Home page of the site")
     public void the_user_is_on_the_home_page() {
+                    Base.driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+
        
     }
 
     @When("the user enters {string} in the search bar")
     public void the_user_enters_in_the_search_bar(String searchItem) {
+
+
         homeAction.searchBarAction(searchItem);
     }
 

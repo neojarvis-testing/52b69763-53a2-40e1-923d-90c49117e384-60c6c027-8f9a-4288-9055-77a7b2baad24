@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import stepdefinition.Hooks;
+import stepdefinitions.Hooks;
 import uistore.HomeLocators_Siva;
 import utils.Base;
 import utils.ExcelReader;
@@ -28,6 +28,7 @@ public class HomePage_Siva extends Base {
      * @param test ExtentTest instance to log report details.
      */
     public void footerVerification(ExtentTest test) {
+
         By[] footerLinks = {
             HomeLocators_Siva.contactUs,
             HomeLocators_Siva.luxuryService,
@@ -53,7 +54,7 @@ public class HomePage_Siva extends Base {
         LoggerHandler.info("Starting footer verification for all links.");
         scrollToFooter();
         for (int i = 0; i < footerLinks.length; i++) {
-            validateLink(footerLinks[i], verificationLinks[i], Hooks.extentTest);
+            validateLink(footerLinks[i], verificationLinks[i], Hooks.test);
         }
         LoggerHandler.info("Footer verification completed.");
     }
@@ -66,11 +67,11 @@ public class HomePage_Siva extends Base {
         try {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("window.scrollBy(0,6000);");
-            Hooks.extentTest.log(Status.INFO, "Scrolled to the footer section.");
+            Hooks.test.log(Status.INFO, "Scrolled to the footer section.");
             LoggerHandler.info("Successfully scrolled to the footer section.");
         } catch (Exception e) {
             String message = "Failed to scroll to footer: " + e.getMessage();
-            Hooks.extentTest.log(Status.FAIL, message);
+            Hooks.test.log(Status.FAIL, message);
             LoggerHandler.error(message);
         }
     }
@@ -132,10 +133,10 @@ public class HomePage_Siva extends Base {
 
             wb.enterAction(HomeLocators_Siva.searchBar);
             LoggerHandler.info("Triggered search action for keyword: " + key);
-            Hooks.extentTest.log(Status.INFO, "Search action triggered for keyword: " + key);
+            Hooks.test.log(Status.INFO, "Search action triggered for keyword: " + key);
         } catch (Exception e) {
             String message = "Search action failed for keyword: " + key + ". Exception: " + e.getMessage();
-            Hooks.extentTest.log(Status.FAIL, message);
+            Hooks.test.log(Status.FAIL, message);
             LoggerHandler.error(message);
         }
     }

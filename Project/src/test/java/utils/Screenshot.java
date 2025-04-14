@@ -19,9 +19,11 @@ public class Screenshot extends Base {
     public static TakesScreenshot ts;
 
     /**
-     * @Description Captures a screenshot with the specified filename and saves it in the "screenshots" directory.
+     * @Description Captures a screenshot with the specified filename and saves it
+     *              in the "screenshots" directory.
      *              If the directory does not exist, it will be created.
-     * @param filename Name of the screenshot file (timestamp will be appended to the filename).
+     * @param filename Name of the screenshot file (timestamp will be appended to
+     *                 the filename).
      */
     public static void captureScreenshot(String filename) {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
@@ -35,14 +37,10 @@ public class Screenshot extends Base {
         if (!screenshotsDir.exists()) {
             screenshotsDir.mkdirs();
         }
-        
         File target = new File(screenshotsDir, name);
         try {
             Files.copy(file, target);
         } catch (IOException e) {
-            e.printStackTrace();
-        }
-        catch(Exception e){
             e.printStackTrace();
         }
     }

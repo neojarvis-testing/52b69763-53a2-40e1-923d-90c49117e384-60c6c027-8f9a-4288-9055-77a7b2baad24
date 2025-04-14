@@ -22,7 +22,7 @@ public class Base {
     public static FileInputStream file;
     public static Properties prop;
 
-    public void loadProperties() throws IOException {
+    public static void loadProperties() throws IOException {
         String propertiesPath = System.getProperty("user.dir") + "/config/browser.properties";
         try {
             file = new FileInputStream(propertiesPath);
