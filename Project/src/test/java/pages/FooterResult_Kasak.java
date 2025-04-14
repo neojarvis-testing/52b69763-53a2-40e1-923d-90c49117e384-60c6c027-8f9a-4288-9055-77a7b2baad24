@@ -7,7 +7,7 @@ import com.aventstack.extentreports.Status;
  * @Description Class for verifying footer links and their corresponding pages.
  */
 
-import stepdefinition.HooksKasak;
+import stepdefinitions.HooksKasak;
 import uistore.HomePageLocators_Kasak;
 import utils.Assertion;
 import utils.Base;
