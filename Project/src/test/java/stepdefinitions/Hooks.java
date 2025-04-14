@@ -11,34 +11,31 @@ import io.cucumber.java.Scenario;
 import utils.Base;
 import utils.GenerateReport;
 
-public class HooksYash extends Base {
+public class Hooks extends Base {
 
-    public static ExtentTest test;
     public static ExtentReports reports;
+    public static ExtentTest test;
 
     @BeforeAll
-    public static void makeRep() {
-        reports = GenerateReport.initializeExtentReport("Mayors");
+    public static void reportGenerate() {
+        reports = GenerateReport.initializeExtentReport("Mayors_Report");
 
     }
 
     @Before
-    public void OpenBr(Scenario sc) {
-        test = reports.createTest(sc.getName());
-
+    public  void configBrowser(Scenario sc) {
         openBrowser();
-
+        test = reports.createTest(sc.getName());
     }
 
     @After
-    public void quitdr() {
-
+    public  void tearBrowser() {
         driver.quit();
 
     }
 
     @AfterAll
-    public static void flushRep() {
+    public static void reportFlush() {
         reports.flush();
 
     }

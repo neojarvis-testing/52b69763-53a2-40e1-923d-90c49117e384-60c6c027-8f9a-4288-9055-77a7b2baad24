@@ -7,7 +7,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksYash;
+import stepdefinitions.Hooks;
 import uistore.BrandLocatorsYash;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
@@ -50,7 +50,7 @@ public class MensWatchpageYash {
             wb.hoverOverElement(BrandLocatorsYash.mens_watches);
             wb.clickOnElement(BrandLocatorsYash.mens_watches);
             LoggerHandler.info(wb.getText(BrandLocatorsYash.mens_watches));
-            HooksYash.test.log(Status.PASS, "Clicked on Mens Watches" + wb.getText(BrandLocatorsYash.mens_watches));
+            Hooks.test.log(Status.PASS, "Clicked on Mens Watches" + wb.getText(BrandLocatorsYash.mens_watches));
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }

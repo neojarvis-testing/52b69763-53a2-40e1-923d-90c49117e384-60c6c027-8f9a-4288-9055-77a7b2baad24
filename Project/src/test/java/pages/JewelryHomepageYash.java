@@ -8,7 +8,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksYash;
+import stepdefinitions.Hooks;
 import uistore.JewelryLocatorYash;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
@@ -54,7 +54,7 @@ public class JewelryHomepageYash {
             wb.waitForElementToBeClickable(JewelryLocatorYash.jwelery, 5);
             wb.hoverOverElement(JewelryLocatorYash.jwelery);
             LoggerHandler.info(wb.getText(JewelryLocatorYash.jwelery));
-            HooksYash.test.log(Status.INFO, "CLicked on " + wb.getText(JewelryLocatorYash.jwelery));
+            Hooks.test.log(Status.INFO, "CLicked on " + wb.getText(JewelryLocatorYash.jwelery));
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -70,7 +70,7 @@ public class JewelryHomepageYash {
             WebDriverHelper wb = new WebDriverHelper();
             wb.clickOnElement(JewelryLocatorYash.chanel);
             LoggerHandler.info(wb.getText(JewelryLocatorYash.chanel));
-            HooksYash.test.log(Status.PASS, "Clicked On Channel " + wb.getText(JewelryLocatorYash.chanel));
+            Hooks.test.log(Status.PASS, "Clicked On Channel " + wb.getText(JewelryLocatorYash.chanel));
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }

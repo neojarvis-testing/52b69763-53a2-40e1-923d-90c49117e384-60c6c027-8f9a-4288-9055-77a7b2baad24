@@ -7,7 +7,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksYash;
+import stepdefinitions.Hooks;
 import uistore.BrandLocatorsYash;
 import utils.GenerateReport;
 import utils.LoggerHandler;
@@ -33,7 +33,7 @@ public class ProductPageYash {
             wb.waitForElementToBeClickable(BrandLocatorsYash.semaster, 5);
             wb.clickOnElement(BrandLocatorsYash.semaster);
             LoggerHandler.info(wb.getText(BrandLocatorsYash.semaster));
-            HooksYash.test.log(Status.PASS, "Clicked On " + wb.getText(BrandLocatorsYash.semaster));
+            Hooks.test.log(Status.PASS, "Clicked On " + wb.getText(BrandLocatorsYash.semaster));
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -81,11 +81,11 @@ public class ProductPageYash {
         try {
             WebDriverHelper wb = new WebDriverHelper();
             // Assertion.assertionVerifyByEqual(wb.getText(BrandLocatorsYash.AddToShoppingbag),
-            // ExcelReader.readCellValue("sheet6", "7", "value"), HooksYash.test);
+            // ExcelReader.readCellValue("sheet6", "7", "value"), Hooks.test);
             wb.clickOnElement(BrandLocatorsYash.AddToShoppingbag);
             LoggerHandler.info(wb.getText(BrandLocatorsYash.AddToShoppingbag));
-            HooksYash.test.log(Status.INFO, "Clicked on " + wb.getText(BrandLocatorsYash.AddToShoppingbag));
-            GenerateReport.addScreenshotToReport("add to cart", HooksYash.test,
+            Hooks.test.log(Status.INFO, "Clicked on " + wb.getText(BrandLocatorsYash.AddToShoppingbag));
+            GenerateReport.addScreenshotToReport("add to cart", Hooks.test,
                     "The product is added to cart successfully.");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());

@@ -8,7 +8,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksYash;
+import stepdefinitions.Hooks;
 import uistore.BrandLocatorsYash;
 import utils.LoggerHandler;
 import utils.WebDriverHelper;
@@ -49,7 +49,7 @@ public class BrandHomepageYash {
             wb.waitForElementToBeClickable(BrandLocatorsYash.brands, 5);
             wb.hoverOverElement(BrandLocatorsYash.brands);
             LoggerHandler.info("Clicked On " + wb.getText(BrandLocatorsYash.brands));
-            HooksYash.test.log(Status.INFO, "Clicked on " + wb.getText(BrandLocatorsYash.brands));
+            Hooks.test.log(Status.INFO, "Clicked on " + wb.getText(BrandLocatorsYash.brands));
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -67,7 +67,7 @@ public class BrandHomepageYash {
             wb.hoverOverElement(BrandLocatorsYash.omega);
             wb.clickOnElement(BrandLocatorsYash.omega);
             LoggerHandler.info("Clicked on Omega" + wb.getText(BrandLocatorsYash.omega));
-            HooksYash.test.log(Status.INFO, "Clicked on Omega" + wb.getText(BrandLocatorsYash.omega));
+            Hooks.test.log(Status.INFO, "Clicked on Omega" + wb.getText(BrandLocatorsYash.omega));
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }

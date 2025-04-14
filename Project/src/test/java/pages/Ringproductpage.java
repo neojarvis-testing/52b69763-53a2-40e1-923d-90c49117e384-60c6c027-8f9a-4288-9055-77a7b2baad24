@@ -7,7 +7,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksYash;
+import stepdefinitions.Hooks;
 import uistore.JewelryLocatorYash;
 import utils.GenerateReport;
 import utils.LoggerHandler;
@@ -27,9 +27,9 @@ public class Ringproductpage {
             wb.hoverOverElement(JewelryLocatorYash.firstProduct);
             wb.clickOnElement(JewelryLocatorYash.firstProduct);
             LoggerHandler.info("Clicked on product in rings product " + wb.getText(JewelryLocatorYash.firstProduct));
-            HooksYash.test.log(Status.PASS,
+            Hooks.test.log(Status.PASS,
                     "Clicked on product in rings product " + wb.getText(JewelryLocatorYash.firstProduct));
-            GenerateReport.addScreenshotToReport("First Product ", HooksYash.test,
+            GenerateReport.addScreenshotToReport("First Product ", Hooks.test,
                     "The product is clicked successfully.");
 
         } catch (Exception e) {
