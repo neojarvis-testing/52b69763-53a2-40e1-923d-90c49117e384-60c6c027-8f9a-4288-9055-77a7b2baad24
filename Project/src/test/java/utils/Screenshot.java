@@ -37,7 +37,6 @@ public class Screenshot extends Base {
         if (!screenshotsDir.exists()) {
             screenshotsDir.mkdirs();
         }
-
         File target = new File(screenshotsDir, name);
         try {
             Files.copy(file, target);

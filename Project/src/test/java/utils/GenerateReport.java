@@ -1,5 +1,4 @@
 package utils;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -53,7 +52,6 @@ public class GenerateReport extends Base {
      */
     private static ExtentReports setupExtentReport(String reportName) {
         extentReport = new ExtentReports();
-
         // Load properties from browser.properties file
         String filepath = System.getProperty("user.dir") + "/config/browser.properties";
         try (FileInputStream file = new FileInputStream(filepath)) {
@@ -62,13 +60,11 @@ public class GenerateReport extends Base {
         } catch (IOException e) {
             System.err.println("Error loading properties file: " + e.getMessage());
         }
-
         // Get the current timestamp for the report name
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
         TimeZone istTimeZone = TimeZone.getTimeZone("Asia/Kolkata"); // IST timezone
         dateFormat.setTimeZone(istTimeZone);
         String timestamp = dateFormat.format(new Date());
-
         // Define the report file path with the timestamp and provided report name
         String reportFilePath = System.getProperty("user.dir") + "/reports/";
         if (reportName == null || reportName.isEmpty()) {
@@ -166,5 +162,4 @@ public class GenerateReport extends Base {
             e.printStackTrace();
         }
     }
-
 }
