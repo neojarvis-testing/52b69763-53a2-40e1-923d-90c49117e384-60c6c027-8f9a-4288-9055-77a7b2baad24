@@ -8,7 +8,7 @@ import com.aventstack.extentreports.Status;
  */
 
 
-import stepdefinitions.HooksUmang;
+import stepdefinitions.Hooks;
 import uistore.HomePageLocatorUmang;
 import utils.Assertion;
 import utils.Base;
@@ -24,7 +24,7 @@ public class HomePageUmang {
      * @param  An Extent instance for reporting.
      */
     public static void verifyTitle() {
-        Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "1", "value"), HooksUmang.test);
+        Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "1", "value"), Hooks.test);
     }
 
     /**
@@ -36,7 +36,7 @@ public class HomePageUmang {
             WebDriverHelper wb = new WebDriverHelper();
             wb.clickOnElement(HomePageLocatorUmang.cookies);
             LoggerHandler.info( "Clicked on "+ wb.getText(HomePageLocatorUmang.cookies)+ " At Homepage");
-            HooksUmang.test.log(Status.INFO, "Clicked on "+ wb.getText(HomePageLocatorUmang.cookies)+ "  At Homepage");
+            Hooks.test.log(Status.INFO, "Clicked on "+ wb.getText(HomePageLocatorUmang.cookies)+ "  At Homepage");
        
             
         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class HomePageUmang {
             wb.waitForElementToBeVisible(HomePageLocatorUmang.watches, 5);
             wb.hoverOverElement(HomePageLocatorUmang.watches);
             LoggerHandler.info("Hover on "+wb.getText(HomePageLocatorUmang.watches)+" At Homepage");
-            HooksUmang.test.log(Status.INFO, "Hover on "+wb.getText(HomePageLocatorUmang.watches)+" At Homepage");
+            Hooks.test.log(Status.INFO, "Hover on "+wb.getText(HomePageLocatorUmang.watches)+" At Homepage");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -67,10 +67,10 @@ public class HomePageUmang {
     public static void verifyBestSellers() {
         WebDriverHelper wb = new WebDriverHelper();
 
-        HooksUmang.test.log(Status.INFO, wb.getText(HomePageLocatorUmang.Bestsellers));
+        Hooks.test.log(Status.INFO, wb.getText(HomePageLocatorUmang.Bestsellers));
         
 
-        Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "2", "value"), HooksUmang.test);
+        Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "2", "value"), Hooks.test);
         
     }
 
@@ -84,7 +84,7 @@ public class HomePageUmang {
             wb.waitForElementToBeVisible(HomePageLocatorUmang.Bestsellers, 5);
             wb.clickOnElement(HomePageLocatorUmang.Bestsellers);
             LoggerHandler.info("Click On "+wb.getText(HomePageLocatorUmang.rolex)+ " At Navigation bar");
-            HooksUmang.test.log(Status.INFO, "Click On "+wb.getText(HomePageLocatorUmang.rolex)+" At Navigation bar");
+            Hooks.test.log(Status.INFO, "Click On "+wb.getText(HomePageLocatorUmang.rolex)+" At Navigation bar");
 
             
         } catch (Exception e) {
@@ -114,7 +114,7 @@ public class HomePageUmang {
             WebDriverHelper wb = new WebDriverHelper();
             wb.hoverOverElement(HomePageLocatorUmang.rolex);
             LoggerHandler.info("Hover On "+wb.getText(HomePageLocatorUmang.rolex)+" At Navigation bar");
-            HooksUmang.test.log(Status.INFO, "Hover On "+wb.getText(HomePageLocatorUmang.rolex)+" At Navigation bar");
+            Hooks.test.log(Status.INFO, "Hover On "+wb.getText(HomePageLocatorUmang.rolex)+" At Navigation bar");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -130,7 +130,7 @@ public class HomePageUmang {
             wb.waitForElementToBeVisible(HomePageLocatorUmang.deepsea, 5);
             wb.clickOnElement(HomePageLocatorUmang.deepsea);
             LoggerHandler.info("Clicked On "+ wb.getText(HomePageLocatorUmang.deepsea)+" At Navigation bar");
-            HooksUmang.test.log(Status.INFO,"Clicked On "+ wb.getText(HomePageLocatorUmang.deepsea)+" At Navigation bar");
+            Hooks.test.log(Status.INFO,"Clicked On "+ wb.getText(HomePageLocatorUmang.deepsea)+" At Navigation bar");
 
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
@@ -142,7 +142,7 @@ public class HomePageUmang {
      * @param  An Extent instance for reporting.
      */
     public static void verifyDeepSea() {
-        Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "3", "value"), HooksUmang.test);
+        Assertion.assertionVerifyByEqual(Base.driver.getTitle(), ExcelReader.readCellValue("Sheet1", "3", "value"), Hooks.test);
     }
 
     /**

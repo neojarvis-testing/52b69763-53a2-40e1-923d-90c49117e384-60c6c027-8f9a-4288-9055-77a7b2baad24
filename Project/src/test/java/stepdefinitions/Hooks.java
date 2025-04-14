@@ -11,7 +11,7 @@ import io.cucumber.java.Scenario;
 import utils.Base;
 import utils.GenerateReport;
 
-public class HooksUmang extends Base {
+public class Hooks extends Base {
 
     public static ExtentReports reports;
     public static ExtentTest test;
@@ -24,8 +24,8 @@ public class HooksUmang extends Base {
 
     @Before
     public  void configBrowser(Scenario sc) {
-        test = reports.createTest(sc.getName());
         openBrowser();
+        test = reports.createTest(sc.getName());
     }
 
     @After

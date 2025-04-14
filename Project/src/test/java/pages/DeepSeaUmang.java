@@ -8,7 +8,7 @@ import com.aventstack.extentreports.Status;
  */
 
 
-import stepdefinitions.HooksUmang;
+import stepdefinitions.Hooks;
 import uistore.DeepSeaLocatorUmang;
 import utils.Assertion;
 
@@ -29,7 +29,7 @@ public class DeepSeaUmang {
             wb.waitForElementToBeVisible(DeepSeaLocatorUmang.rolexwatches, 5);
             wb.clickOnElement(DeepSeaLocatorUmang.rolexwatches);
             LoggerHandler.info("Click On "+ wb.getText(DeepSeaLocatorUmang.rolexwatches)+" At Deepsea Page");
-             HooksUmang.test.log(Status.INFO,"Click On "+ wb.getText(DeepSeaLocatorUmang.rolexwatches)+" At Deepsea Page");
+             Hooks.test.log(Status.INFO,"Click On "+ wb.getText(DeepSeaLocatorUmang.rolexwatches)+" At Deepsea Page");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -45,7 +45,7 @@ public class DeepSeaUmang {
             wb.waitForElementToBeVisible(DeepSeaLocatorUmang.discoverrolex, 5);
             wb.clickOnElement(DeepSeaLocatorUmang.rolexwatches);
             LoggerHandler.info("Click On "+ wb.getText(DeepSeaLocatorUmang.discoverrolex)+" At Rolex Watches Page");
-            HooksUmang.test.log(Status.INFO,"Click On "+ wb.getText(DeepSeaLocatorUmang.discoverrolex)+" At Rolex Watches Page");
+            Hooks.test.log(Status.INFO,"Click On "+ wb.getText(DeepSeaLocatorUmang.discoverrolex)+" At Rolex Watches Page");
 
            
         } catch (Exception e) {
@@ -63,7 +63,7 @@ public class DeepSeaUmang {
             wb.waitForElementToBeVisible(DeepSeaLocatorUmang.newwatches, 5);
             wb.clickOnElement(DeepSeaLocatorUmang.newwatches);
             LoggerHandler.info("Click On "+ wb.getText(DeepSeaLocatorUmang.newwatches)+" At Discover Rolex Page");
-            HooksUmang.test.log(Status.INFO,"Click On "+ wb.getText(DeepSeaLocatorUmang.newwatches)+" At Discover Rolex Page");
+            Hooks.test.log(Status.INFO,"Click On "+ wb.getText(DeepSeaLocatorUmang.newwatches)+" At Discover Rolex Page");
          
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
@@ -80,7 +80,7 @@ public class DeepSeaUmang {
             wb.waitForElementToBeVisible(DeepSeaLocatorUmang.watchmaking, 5);
             wb.clickOnElement(DeepSeaLocatorUmang.watchmaking);
             LoggerHandler.info("Click On "+wb.getText(DeepSeaLocatorUmang.watchmaking)+" At New Watches Page");
-            HooksUmang.test.log(Status.INFO, "Click On "+wb.getText(DeepSeaLocatorUmang.watchmaking)+" At New Watches Page");
+            Hooks.test.log(Status.INFO, "Click On "+wb.getText(DeepSeaLocatorUmang.watchmaking)+" At New Watches Page");
 
             Screenshot.captureScreenshot(wb.getText(DeepSeaLocatorUmang.watchmaking));
           
@@ -96,7 +96,7 @@ public class DeepSeaUmang {
     public static void verifyRolex() {
         WebDriverHelper wb = new WebDriverHelper();
         Assertion.assertionVerifyByEqual(wb.getText(DeepSeaLocatorUmang.verifyrolex),
-                ExcelReader.readCellValue("Sheet1", "4", "value"), HooksUmang.test);
+                ExcelReader.readCellValue("Sheet1", "4", "value"), Hooks.test);
     }
 
     /**

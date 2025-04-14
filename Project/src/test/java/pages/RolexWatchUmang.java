@@ -2,7 +2,7 @@ package pages;
 
 import com.aventstack.extentreports.Status;
 
-import stepdefinitions.HooksUmang;
+import stepdefinitions.Hooks;
 
 /**
  * @Created by Umang Raj
@@ -27,7 +27,7 @@ public class RolexWatchUmang {
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.popup, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.popup);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.popup)+" At Homepage");
-            HooksUmang.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.popup)+" At Homepage");
+            Hooks.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.popup)+" At Homepage");
        
 
            
@@ -46,7 +46,7 @@ public class RolexWatchUmang {
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.ForHim, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.ForHim);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.ForHim)+" At Fitler Section");
-            HooksUmang.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.ForHim)+" At Fitler Section");
+            Hooks.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.ForHim)+" At Fitler Section");
          
            
         } catch (Exception e) {
@@ -64,7 +64,7 @@ public class RolexWatchUmang {
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.Cartier, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.Cartier);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.Cartier)+" At Fitler Section");
-            HooksUmang.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.Cartier)+" At Fitler Section");
+            Hooks.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.Cartier)+" At Fitler Section");
           
            
         } catch (Exception e) {
@@ -82,12 +82,12 @@ public class RolexWatchUmang {
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.DialColor, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.DialColor);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.DialColor)+" At Fitler Section");
-            HooksUmang.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.DialColor)+" At Fitler Section");
+            Hooks.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.DialColor)+" At Fitler Section");
            
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.Black, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.Black);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.Black)+" At Fitler Section");
-            HooksUmang.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.Black)+" At Fitler Section");
+            Hooks.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.Black)+" At Fitler Section");
 
            
         } catch (Exception e) {
@@ -105,7 +105,7 @@ public class RolexWatchUmang {
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.firstProduct, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.firstProduct);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.firstProduct)+" At Product Page");
-            HooksUmang.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.firstProduct)+" At Product Page");
+            Hooks.test.log(Status.INFO,"Clicked on "+ wb.getText(RolexWatchLocatorUmang.firstProduct)+" At Product Page");
            
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
@@ -122,7 +122,7 @@ public class RolexWatchUmang {
             wb.waitForElementToBeVisible(RolexWatchLocatorUmang.addtobag, 5);
             wb.clickOnElement(RolexWatchLocatorUmang.addtobag);
             LoggerHandler.info("Clicked on "+wb.getText(RolexWatchLocatorUmang.addtobag)+" At Product Page");
-            HooksUmang.test.log(Status.INFO, "Clicked on "+wb.getText(RolexWatchLocatorUmang.addtobag)+" At Product Page");
+            Hooks.test.log(Status.INFO, "Clicked on "+wb.getText(RolexWatchLocatorUmang.addtobag)+" At Product Page");
 
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
