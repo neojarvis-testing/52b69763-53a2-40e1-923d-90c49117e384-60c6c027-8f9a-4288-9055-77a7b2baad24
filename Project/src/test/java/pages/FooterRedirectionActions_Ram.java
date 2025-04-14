@@ -3,7 +3,7 @@ package pages;
 import org.junit.Assert;
 import com.aventstack.extentreports.Status;
 
-import stepdefinition.HooksRam;
+import stepdefinitions.Hooks;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
@@ -29,10 +29,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in yoursecurity: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in yoursecurity: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in yoursecurity: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in yoursecurity: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in yoursecurity: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in yoursecurity: " + e.getMessage());
         }
     }
 
@@ -48,10 +48,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in termsAndConditions: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in termsAndConditions: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in termsAndConditions: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in termsAndConditions: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in termsAndConditions: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in termsAndConditions: " + e.getMessage());
         }
     }
 
@@ -67,10 +67,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in privacyPolicy: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in privacyPolicy: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in privacyPolicy: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in privacyPolicy: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in privacyPolicy: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in privacyPolicy: " + e.getMessage());
         }
     }
 
@@ -86,10 +86,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in cookiePolicy: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in cookiePolicy: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in cookiePolicy: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in cookiePolicy: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in cookiePolicy: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in cookiePolicy: " + e.getMessage());
         }
     }
 
@@ -105,10 +105,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in accessibility: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in accessibility: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in accessibility: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in accessibility: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in accessibility: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in accessibility: " + e.getMessage());
         }
     }
 
@@ -124,10 +124,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in payByLink: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in payByLink: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in payByLink: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in payByLink: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in payByLink: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in payByLink: " + e.getMessage());
         }
     }
 
@@ -143,10 +143,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in watches: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in watches: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in watches: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in watches: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in watches: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in watches: " + e.getMessage());
         }
     }
 
@@ -162,10 +162,10 @@ public class FooterRedirectionActions_Ram {
 
         } catch (Exception e) {
             LoggerHandler.error("Exception in jewelry: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in jewelry: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in jewelry: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in jewelry: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in jewelry: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in jewelry: " + e.getMessage());
         }
     }
 }

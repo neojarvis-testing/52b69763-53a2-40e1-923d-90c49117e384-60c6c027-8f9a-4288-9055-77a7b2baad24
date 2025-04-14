@@ -2,7 +2,8 @@ package pages;
 
 import org.junit.Assert;
 import com.aventstack.extentreports.Status;
-import stepdefinition.HooksRam;
+
+import stepdefinitions.Hooks;
 import uistore.HomePage_Locator_Ram;
 import utils.Base;
 import utils.ExcelReader;
@@ -26,7 +27,7 @@ public class HomePageActions_Ram {
             wb.jsClick(HomePage_Locator_Ram.popup);
         } catch (Exception e) {
             LoggerHandler.error("Exception in scrolltofooter: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in scrolltofooter: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in scrolltofooter: " + e.getMessage());
         }
     }
 
@@ -40,7 +41,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.yoursecurity);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickYourSecurity: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickYourSecurity: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickYourSecurity: " + e.getMessage());
         }
     }
 
@@ -54,7 +55,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.terms);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickTermsAndConditions: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickTermsAndConditions: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickTermsAndConditions: " + e.getMessage());
         }
     }
 
@@ -68,7 +69,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.PrivacyPolicy);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickprivacyPolicy: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickprivacyPolicy: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickprivacyPolicy: " + e.getMessage());
         }
     }
 
@@ -82,7 +83,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.CookiePolicy);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickCookiePolicy: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickCookiePolicy: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickCookiePolicy: " + e.getMessage());
         }
     }
 
@@ -96,7 +97,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.Accessibility);
         } catch (Exception e) {
             LoggerHandler.error("Exception in accessibility: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in accessibility: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in accessibility: " + e.getMessage());
         }
     }
 
@@ -110,7 +111,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.PayByLink);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickPayByLink: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickPayByLink: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickPayByLink: " + e.getMessage());
         }
     }
 
@@ -124,7 +125,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.watches);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickWatches: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickWatches: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickWatches: " + e.getMessage());
         }
     }
 
@@ -138,7 +139,7 @@ public class HomePageActions_Ram {
             wb.clickOnElement(HomePage_Locator_Ram.jwelery);
         } catch (Exception e) {
             LoggerHandler.error("Exception in clickJwelery: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in clickJwelery: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in clickJwelery: " + e.getMessage());
         }
     }
 
@@ -152,7 +153,7 @@ public class HomePageActions_Ram {
             Base.driver.navigate().back();
         } catch (Exception e) {
             LoggerHandler.error("Exception in navigateBack: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in navigateBack: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in navigateBack: " + e.getMessage());
         }
     }
 
@@ -168,10 +169,10 @@ public class HomePageActions_Ram {
             redirect.payByLink();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.PayByLink) + " At Homepage");
-            HooksRam.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.PayByLink) + " At Homepage");
+            Hooks.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.PayByLink) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in payByLinkVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in payByLinkVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in payByLinkVerification: " + e.getMessage());
         }
     }
 
@@ -186,10 +187,10 @@ public class HomePageActions_Ram {
             redirect.yoursecurity();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.yoursecurity) + " At Homepage");
-            HooksRam.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.yoursecurity) + " At Homepage");
+            Hooks.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.yoursecurity) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in yourSecurityVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in yourSecurityVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in yourSecurityVerification: " + e.getMessage());
         }
     }
 
@@ -205,10 +206,10 @@ public class HomePageActions_Ram {
             redirect.termsAndConditions();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.terms) + " At Homepage");
-            HooksRam.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.terms) + " At Homepage");
+            Hooks.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.terms) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in termsVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in termsVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in termsVerification: " + e.getMessage());
         }
     }
 
@@ -224,10 +225,10 @@ public class HomePageActions_Ram {
             redirect.privacyPolicy();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.PrivacyPolicy) + " At Homepage");
-            HooksRam.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.PrivacyPolicy) + " At Homepage");
+            Hooks.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.PrivacyPolicy) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in privacyPolicyVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in privacyPolicyVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in privacyPolicyVerification: " + e.getMessage());
         }
     }
 
@@ -243,10 +244,10 @@ public class HomePageActions_Ram {
             redirect.cookiePolicy();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.CookiePolicy) + " At Homepage");
-            HooksRam.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.CookiePolicy) + " At Homepage");
+            Hooks.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.CookiePolicy) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in cookiePolicyVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in cookiePolicyVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in cookiePolicyVerification: " + e.getMessage());
         }
     }
 
@@ -262,10 +263,10 @@ public class HomePageActions_Ram {
             redirect.accessibility();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.Accessibility) + " At Homepage");
-            HooksRam.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.Accessibility) + " At Homepage");
+            Hooks.test.log(Status.INFO,"Clicked on " + wb.getText(HomePage_Locator_Ram.Accessibility) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in accessibilityVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in accessibilityVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in accessibilityVerification: " + e.getMessage());
         }
     }
 
@@ -281,10 +282,10 @@ public class HomePageActions_Ram {
             redirect.watches();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.watches) + " At Homepage");
-            HooksRam.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.watches) + " At Homepage");
+            Hooks.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.watches) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in watchesVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in watchesVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in watchesVerification: " + e.getMessage());
         }
     }
 
@@ -300,10 +301,10 @@ public class HomePageActions_Ram {
             redirect.jewelry();
             navigateBack();
             LoggerHandler.info("Clicked on " + wb.getText(HomePage_Locator_Ram.jwelery) + " At Homepage");
-            HooksRam.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.jwelery) + " At Homepage");
+            Hooks.test.log(Status.INFO, "Clicked on " + wb.getText(HomePage_Locator_Ram.jwelery) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in jweleryVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in jweleryVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in jweleryVerification: " + e.getMessage());
         }
     }
 
@@ -318,13 +319,13 @@ public class HomePageActions_Ram {
             String actualText = ExcelReader.readCellValue("Sheet1", "32", "value");
             Assert.assertEquals(text, actualText);
             LoggerHandler.info("Verified " + wb.getText(HomePage_Locator_Ram.categories) + " At Homepage");
-            HooksRam.test.log(Status.INFO, "Verified " + wb.getText(HomePage_Locator_Ram.categories) + " At Homepage");
+            Hooks.test.log(Status.INFO, "Verified " + wb.getText(HomePage_Locator_Ram.categories) + " At Homepage");
         } catch (Exception e) {
             LoggerHandler.error("Exception in categoryVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "Exception in categoryVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "Exception in categoryVerification: " + e.getMessage());
         } catch (AssertionError e) {
             LoggerHandler.error("AssertionError in categoryVerification: " + e.getMessage());
-            HooksRam.test.log(Status.FAIL, "AssertionError in categoryVerification: " + e.getMessage());
+            Hooks.test.log(Status.FAIL, "AssertionError in categoryVerification: " + e.getMessage());
         }
     }
 }
