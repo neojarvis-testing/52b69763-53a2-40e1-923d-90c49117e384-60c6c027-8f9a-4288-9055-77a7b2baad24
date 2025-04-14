@@ -19,18 +19,18 @@ public class StepDefinitions2Div {
     @When("user enter rings")
     public void user_enter_rings() {
 
-        HomePageDiv.homepageactionring(HooksDiv.test);
+        HomePageDiv.homepageactionring(Hooks.test);
 
     }
 
     @When("user click on brand then carlex")
     public void user_click_on_brand_then_carlex() {
-        RingPageActionDiv.selectingring(HooksDiv.test);
+        RingPageActionDiv.selectingring(Hooks.test);
 
     }
 
     @Then("user click on rings then click on for her")
     public void user_click_on_rings_then_click_on_for_her() throws InterruptedException {
-        ProductBuyingActionDiv.ringbuying(HooksDiv.test);
+        ProductBuyingActionDiv.ringbuying(Hooks.test);
     }
 }
