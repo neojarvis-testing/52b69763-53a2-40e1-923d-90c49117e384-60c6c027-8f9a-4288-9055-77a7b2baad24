@@ -23,7 +23,7 @@ public class BrandHomepageYash {
      * 
      */
 
-    /**
+    /**P
      * @Description Handles cookies acceptance by waiting for the element to be
      *              clickable and interacting with it.
      * 
